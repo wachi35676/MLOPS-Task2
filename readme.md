@@ -19,7 +19,6 @@ The  `StudentsInMLOps` class encapsulates methods for managing student enrollmen
    ```
 2. **Install dependencies:**
    ```bash
-   cd mlops-class-activity
    make install 
    ```
 

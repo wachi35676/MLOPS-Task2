@@ -16,5 +16,17 @@ pipeline {
                 bat 'python -m pytest test.py'
             }
         }
+        stage('Deploy') {
+            steps {
+                script {
+                    def branchName = env.GIT_BRANCH.split('/').last()
+                    if (branchName == 'main') {
+                        echo "Deploying to production"
+                    } else {
+                        echo "Deploying to UAT"
+                    }
+                }
+            }
+        }
     }
 }

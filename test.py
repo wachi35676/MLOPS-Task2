@@ -1,6 +1,5 @@
 from main import StudentInMLOps
 
-
 def test_enrollStudents():
     student = StudentInMLOps()
     assert student.enrollStudents(10) == 10

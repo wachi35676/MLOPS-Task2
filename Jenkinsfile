@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'make install'
+                bat 'python -m pip install -r requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'make test'
+                bat 'python -m pytest test.py'
             }
         }
     }
